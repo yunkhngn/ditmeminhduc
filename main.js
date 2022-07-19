@@ -1,12 +1,23 @@
 var clickedTime = 0
+
+//create local storage if it doesn't exist
+if(localStorage.getItem("clickedCount") === null){
+    localStorage.setItem("clickedCount", 0) 
+}
+var clickedTime = document.getElementById("clickedCount")
+clickedTime.innerHTML = localStorage.getItem("clickedCount") + " lần"
+
 function clicked(){
-    var clickedCount = document.getElementById("clickedCount")
+    var clickedTime = document.getElementById("clickedCount")
+    var current = localStorage.getItem("clickedCount")
     var img = document.getElementById("img")
     var title = document.getElementById("title")
-    //set clickedCount to var + 1
+
     //add rotating class to img if img doesn't have it
     img.classList.add("rotating")
-    clickedCount.innerHTML = parseInt(clickedCount.innerHTML) + 1 + " lần"
+    clickedTime.innerHTML = parseInt(current) + 1 + " lần"
+    var currentValue = parseInt(current) + 1
+    localStorage.setItem("clickedCount", currentValue)
     title.classList.add("glow")
     title.innerHTML = "Playing music"
     playMusic()
