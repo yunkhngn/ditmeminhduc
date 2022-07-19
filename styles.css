@@ -1,0 +1,77 @@
+.title{
+    font-size: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #30375e;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.button:hover{
+    background-color: #45a049;
+    transition: 0.5s;
+}
+.cheems{
+    width: 300px;
+    border: 15px solid white;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
+}
+
+.rotating {
+    animation: rotate 3s infinite linear;
+ }
+ 
+ @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+ }
+
+ .glow {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  h3{
+    font-size: 30px;
+  }

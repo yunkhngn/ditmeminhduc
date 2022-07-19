@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Địt mẹ minh đức</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Web này lập ra để nói địt mẹ minh đức</h1>
+    <img src="chem.png" alt="cheems" class="cheems" id="img">
+    <h2>Số lần địt mẹ minh đức:</h2>
+    <h3 id="clickedCount">0 lần</h3>
+    <h1 id="title" class="title">Web này lập ra để<br> địt mẹ minh đức</h1>
+    <button onClick={clicked()} class="button">Click để địt mẹ minh đức</button>
+    <audio id="audio" preload="none">
+        <source src="./nhac.mp3" type="audio/mpeg" />
+        Your browser does not support this audio type.
+      </audio> 
+    <script src="main.js"></script>
 </body>
 </html>
