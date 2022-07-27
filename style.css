@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: top;
+ background-image:url(macos-big-sur.jpg);
+ transition: all 1s ease-in-out;
+}
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  width: 50%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.card::after,
+.card img {
+  border-radius: 50%;
+}
+.body,
+.card,
+.stats {
+  display: flex;
+}
+.data{
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.data:hover{
+  color: #fcca78;
+  transition-duration: 0.5s;
+}
+
+.data:not(:hover){
+  color: #fff;
+  transition-duration: 0.5s;
+}
+
+.card {
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  background: inherit;
+  max-width: 400px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+  margin: 1rem;
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+ box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.5);
+ filter: blur(300px);
+ -webkit-filter: blur(300px);
+ -moz-filter: blur(300px);
+ -o-filter: blur(300px);
+ -ms-filter: blur(300px);
+}
+.card::before {
+  width: 100%;
+  height: 100%;
+  border: 0px solid rgba(255, 255, 255, 0.678);
+  border-radius: 10px;
+  top: -.7rem;
+  left: -.7rem;
+}
+
+.card img {
+  width: 8rem;
+  min-width: 80px;
+  box-shadow: 0 0 0 5px #FFF;
+}
+
+.card:hover{
+  transform: scale(1.02);
+  transition-duration: 0.4s;
+}
+
+.card:not(:hover){
+  transform: scale(1);
+  transition-duration: 0.4s;
+}
+
+.infos {
+  margin-left: 1.5rem;
+}
+
+.name {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+  justify-content: center;
+  color: #fff
+
+}
+.name h2 {
+  font-size: 1.5rem;
+}
+.name h4 {
+  font-size: .8rem;
+  color: #fff
+}
+
+.text {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-weight: 500;
+  inline-size: 300px;
+  overflow-wrap: break-word;
+}
+
+.stats {
+  margin-bottom: 1rem;
+  color: #fff
+}
+.stats li {
+  min-width: 5rem;
+}
+.stats li h3 {
+  font-size: .99rem;
+}
+.stats li h4 {
+  font-size: .75rem;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.links button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7em;
+  width: 80%;
+  padding: .5rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .25s linear;
+}
+.follow{
+    margin-right:5px;
+
+}
+
+.links .ditmeninh, 
+.links .view:hover {
+  background-color: #fff;
+  color: #000;
+}
+.links .view,
+.links .ditmeninh:hover{
+  background-color: transparent;
+  color: #fff;
+}
+
+.social{
+    margin: 0 0;
+    font-size: 1.1em; 
+    justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.social a{
+  color: #fff;
+  transition: .3s linear;
+  margin-right: 7px;
+  margin-left: 7px;
+  text-decoration: none;
+}
+
+
+
+.social a:hover{
+    color:#000
+}
+
+.copyright{
+  font-family: 'segoe ui', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  color:white; 
+  font-size: 0.7em;
+}
+
+.changeWallpaper{
+  position: absolute;
+  width:3em;
+  height:3em;
+  top: 15px;
+  right: 15px;
+  color:white;
+  font-size: 0.85em;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.changeWallpaper:hover{
+  background-color: #fff;
+  color: #000;
+  transition-duration: 0.5s;
+  animation: Size 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Size{
+  from{
+    font-size: 0.9em;
+  }
+  to{
+    font-size: 0.85em;
+  }
+}
+
+@keyframes Sizeout{
+  from{
+    font-size: 0.85em;
+  }
+  to{
+    font-size: 0.9em;
+  }
+}
+
+.changeWallpaper:not(:hover){
+  background-color: transparent;
+  color: #fff;
+  transition-duration: 0.5s;
+  animation: Sizeout 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.changeWallpaper:active{
+  background-color: #fff;
+  color: #000;
+  transform: scale(0.95);
+  transition-duration: 0.5s;
+  animation: Clicked 0.5s;
+  animation-fill-mode: forwards;
+}
+.img img{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.rotating{
+  animation: rotate 3s linear infinite !important;
+  width: 70% !important;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.img img:hover{
+  transform: scale(1.2) translate(0, -10px);
+  transition-duration: 0.5s;
+  animation: Clicked 0.5s;
+  animation-fill-mode: forwards;
+  /* Let the image out of the card */
+}
+.img img:not(:hover){
+  transform: scale(1);
+  transition-duration: 0.5s;
+  animation: Clicked 0.5s;
+  animation-fill-mode: forwards;
+  
+}
+
+.linking:hover{
+  color:#fcca78 !important;
+  transition-duration: 0.4s; 
+}
+.linking:not(:hover){
+  color:#fff !important;
+  transition-duration: 0.4s; 
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    display: block;
+  }
+  .infos {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  .links button {
+    min-width: 100px;
+  }
+
+  .links{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .follow, .view{
+    margin:5px;
+  }
+
+}
+@media screen and (max-height:715px){
+  .card {
+    display: block;
+  }
+  .infos {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+  .links button {
+    min-width: 100px;
+  }
+  .changeWallpaper{
+    display:none;
+  }
+  .copyright{
+    display:none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card{
+    width: 100%;
+    height: 95%;
+  }
+
+  .changeWallpaper{
+    display:none;
+  }
+}
+
+@media screen and (max-height:850px){
+  .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    width: 100%;
+    height: 95%;
+  }
+}

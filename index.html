@@ -1,22 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Địt mẹ minh đức</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Địt mẹ Đức loz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="./avatar.png">
+  
 </head>
 <body>
-    <img src="chem.png" alt="cheems" class="cheems" id="img">
-    <h2>Số lần địt mẹ minh đức:</h2>
-    <h3 id="clickedCount">0 lần</h3>
-    <h1 id="title" class="title">Web này lập ra để<br> địt mẹ minh đức</h1>
-    <button onClick={clicked()} class="button">Click để địt mẹ minh đức</button>
+<body id="body" class="body">
+  <div class="wrap">
+    <div class="card" id="card" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+    unselectable="on"
+    onselectstart="return false;" 
+    onmousedown="return false;">
+      <div class="top">
+        <div class="img">
+          <img id="ninhdeptrai"  src="./ditmeduc.jpg" alt="Đức đần">
+          <div class="name">
+            <h2 id="clickedCount">Địt mẹ Đức</h2>
+            <h4 class="data">Web này lập ra để địt mẹ Đức</h4>
+          </div>
+          <div class="links">
+            <button class="ditmeninh" onclick="clicked()">Địt mẹ Đức</button>
+          </div>
+        </div>
+        <div class="infos">
+          <p class="text">
+            Địt mẹ Đức đầu buồi. Đức bê đê.
+          </p>
+          <p class="text">
+          - Antifan Khoa Nguyễn 20 năm.
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
     <audio id="audio" preload="none">
-        <source src="./nhac.mp3" type="audio/mpeg" />
-        Your browser does not support this audio type.
-      </audio> 
-    <script src="main.js"></script>
-</body>
+      <source src="./nhac.mp3" type="audio/mpeg" />
+      Your browser does not support this audio type.
+    </audio> 
+      <button class="changeWallpaper" onclick="changeWallpaper()">C</button>
+      <p style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+      unselectable="on"
+      onselectstart="return false;" 
+      onmousedown="return false;" class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Created by <a class="linking" href="https://www.facebook.com/yun.khngn" target="_blank" style="text-decoration: none; color:white;"><strong>Khoa Nguyễn</strong></a></a></p>
+    </dbody>
+    
+    </body>
+
+<script >
+  if(localStorage.getItem("clickedCount") === null){
+      localStorage.setItem("clickedCount", 0) 
+  }
+
+  var clickedTime = document.getElementById("clickedCount")
+  clickedTime.innerHTML = "Địt mẹ Đức " + localStorage.getItem("clickedCount") + " lần"
+
+  function clicked(){
+    var clickedTime = document.getElementById("clickedCount")
+    var current = localStorage.getItem("clickedCount")
+    var img = document.getElementById("ninhdeptrai")
+
+    //add rotating class to img if img doesn't have it
+    img.classList.add("rotating")
+    clickedTime.innerHTML = "Địt mẹ Đức " + parseInt(current) + " lần"
+    var currentValue = parseInt(current) + 1
+    localStorage.setItem("clickedCount", currentValue)
+    playMusic()
+  }
+
+  function playMusic(){
+      var audio = document.getElementById("audio")
+      audio.play();
+  }
+
+    let Wallpaper = "bigSur";
+
+    const changeToBigSur = (body, card) => {
+      body.style.backgroundImage = "url('macos-big-sur.jpg')";
+      body.style.backgroundSize = "cover";
+      body.style.backgroundPosition = "center";
+      body.style.backgroundRepeat = "no-repeat";
+      
+      card.style.boxShadow = "inset 0 0 0 300px rgba(0, 0, 0, 0.1)";
+    }
+
+    const changeToMonterey = (body, card) => {
+      body.style.backgroundImage = "url('macos-monterey.jpg')";
+      body.style.backgroundSize = "cover";
+      body.style.backgroundPosition = "center";
+      body.style.backgroundRepeat = "no-repeat";
+      card.style.boxShadow = "inset 0 0 0 300px rgba(0, 0, 0, 0.1)";
+    }
+
+    const changeWallpaper = () => {
+    let body = document.getElementById("body");
+    let card = document.getElementById("card");
+
+      
+    if(Wallpaper === "monterey"){
+      changeToBigSur(body, card);
+      Wallpaper = "bigSur";
+    }
+    else{
+      changeToMonterey(body, card);
+      Wallpaper = "monterey";
+    }
+    }
+</script>
 </html>
